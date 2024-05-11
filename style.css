@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./images/black-background.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+header,
+form,
+main {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.21);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+}
+
+header {
+  border-radius: 0 0 16px 16px;
+  padding: 10px;
+  font-size: 32px;
+}
+
+form {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form h1 {
+  font-weight: 500;
+}
+form div {
+  display: flex;
+}
+form div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+form div button {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 0 8px 8px 0;
+  background: #0181f8;
+  color: white;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;
+}
+#left {
+  display: flex;
+  flex-direction: column;
+}
+#left img {
+  width: 150px;
+  border-radius: 10px;
+}
+#left a {
+  background: #0181f8;
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+#right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#right div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#right span {
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+#right span:nth-child(1) {
+  background: #0e2a54;
+}
+#right span:nth-child(2) {
+  background: #206e8c;
+}
+#right span:nth-child(3) {
+  background: #2e8a99;
+}
+#right span:nth-child(4) {
+  background: #84a7a1;
+}
+#right ul {
+  list-style: none;
+  background: black;
+  border-radius: 10px;
+}
+#right ul li {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+ul li:last-child {
+  border: none !important;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 20px;
+    height: 120vh;
+  }
+  main {
+    flex-direction: column;
+  }
+  main img {
+    margin: auto;
+  }
+  #right div {
+    justify-content: space-between;
+  }
+}
